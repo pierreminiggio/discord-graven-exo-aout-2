@@ -5,8 +5,16 @@ namespace PierreMiniggio\MinecraftTorchCoordinateFinder;
 class MinecraftTorchCoordinateFinder
 {
 
+    public static array $cache = [];
+
     public function run(int $torchLight, int $initialX = 0, int $initialY = 0): array
     {
+
+        $cacheKey = $torchLight . '_' . $initialX . '_' . $initialY;
+
+        if (isset(static::$cache[$cacheKey])) {
+            return static::$cache[$cacheKey];
+        }
 
         $coords = [];
 
@@ -42,6 +50,6 @@ class MinecraftTorchCoordinateFinder
             }
         }
 
-        return $coords;
+        return static::$cache[$cacheKey] = $coords;
     }
 }
