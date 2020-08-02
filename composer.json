@@ -1,0 +1,26 @@
+{
+    "name": "pierreminiggio/discord-graven-exo-aout-2",
+    "authors": [
+        {
+            "name": "Pierre MINIGGIO",
+            "email": "pierre@miniggiodev.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PierreMiniggio\\MinecraftTorchCoordinateFinder\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PierreMiniggio\\MinecraftTorchCoordinateFinder\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
